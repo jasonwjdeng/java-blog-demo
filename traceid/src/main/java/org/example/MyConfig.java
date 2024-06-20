@@ -24,6 +24,7 @@ public class MyConfig implements WebMvcConfigurer {
     FilterRegistrationBean<MyFilter> filterRegistrationBean = new FilterRegistrationBean<>();
     filterRegistrationBean.setFilter(new MyFilter());
     filterRegistrationBean.setDispatcherTypes(DispatcherType.REQUEST, DispatcherType.ASYNC);
+    filterRegistrationBean.addUrlPatterns("/");
     return filterRegistrationBean;
   }
 
